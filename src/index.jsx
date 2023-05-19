@@ -17,7 +17,7 @@ wasm.then((m) => {
             <>
                 <div>
                     <h1>Hi there</h1>
-                    <button onClick={m.big_computation}>Run Computation</button>
+                    <button onClick={() => m.find_divisors(BigInt(1), BigInt(250000), true)}>Run Computation</button>
                 </div>
                 <div>
                     <input type="text" onChange={handleChange} />
