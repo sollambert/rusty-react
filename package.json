@@ -10,7 +10,7 @@
     "build": "npm run build:wasm && npm run build:bindgen && npx webpack"
   },
   "keywords": [],
-  "author": "Solomon Lambert <sol.lambert@gmail.com",
+  "author": "Solomon Lambert",
   "license": "MIT",
   "dependencies": {
     "@types/node": "^18.15.11",
