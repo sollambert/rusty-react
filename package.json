@@ -1,0 +1,30 @@
+{
+  "name": "rusty-react",
+  "version": "1.0.0",
+  "description": "A skeleton app showing how to use Rust to leverage Wasm in your React app.",
+  "main": "src/index.jsx",
+  "scripts": {
+    "dev": "webpack server",
+    "build:wasm": "cargo build --target wasm32-unknown-unknown",
+    "build:bindgen": "wasm-bindgen target/wasm32-unknown-unknown/debug/rusty_react.wasm --out-dir build",
+    "build": "npm run build:wasm && npm run build:bindgen && npx webpack"
+  },
+  "keywords": [],
+  "author": "Josh Finnie <josh@jfin.us",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.18.6",
+    "@wasm-tool/wasm-pack-plugin": "^1.7.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.1.2",
+    "html-webpack-plugin": "^5.5.1",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  }
+}
