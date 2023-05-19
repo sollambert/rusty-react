@@ -1,6 +1,7 @@
 import React, {useState} from "react";
+import * as wasm from "../build/rusty_react";
 
-export function App({wasm}: any): JSX.Element {
+export function App(): JSX.Element {
     const [name, setName] = useState("");
     const handleChange = (e: any) => {
         setName(e.target.value);
@@ -8,8 +9,6 @@ export function App({wasm}: any): JSX.Element {
     const handleClick = () => {
         wasm.welcome(name);
     };
-
-    console.log(wasm)
 
     return (
         <>
