@@ -1,12 +1,16 @@
 use wasm_bindgen::prelude::*;
 
+//External bindgen imports from JS
 #[wasm_bindgen]
 extern "C" {
     fn alert(s: &str);
-    #[wasm_bindgen(js_namespace = console)]
+}
+#[wasm_bindgen(js_namespace = console)]
+extern "C" {
     pub fn log(s: &str);
 }
 
+//Bindgen export for find_divisors function
 #[wasm_bindgen]
 pub fn find_divisors(min: u64, max: u64, display_time: bool) {
     let start = js_sys::Date::now();
