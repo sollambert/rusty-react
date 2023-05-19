@@ -12,7 +12,10 @@ module.exports = {
         compress: true,
         port: 8080,
         hot: true,
-        static: "./dist",
+        static: [
+            { directory: path.join(__dirname, "dist") },
+            { directory: path.join(__dirname, "public") },
+        ],
         historyApiFallback: true,
         open: true,
     },
@@ -34,6 +37,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: __dirname + "/public/index.html",
             filename: "index.html",
+            favicon: "./public/favicon.ico"
         }),
         new WasmPackPlugin({
             crateDirectory: path.resolve(__dirname, ".")
