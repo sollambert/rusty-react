@@ -3,10 +3,10 @@ const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 const path = require("path");
 
 module.exports = {
-    entry: "./src/index.jsx",
+    entry: "./src/index.tsx",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.[hash].js",
+        filename: "bundle.[hash].js"
     },
     devServer: {
         compress: true,
@@ -19,13 +19,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx|ts|tsx)?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                 },
             },
         ],
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [
         new HtmlWebpackPlugin({
