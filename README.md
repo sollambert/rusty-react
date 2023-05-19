@@ -63,7 +63,7 @@ This template was created to provide a boilerplate starting point for my Typescr
 
 ### Built With
 
-[![React][React.js]][React-url] [![Node.js][Node.js]][Node-url]
+[![React][React.js]][React-url] [![Node.js][Node.js]][Node-url] [![WebAssembly][WebAssembly]][WebAssembly-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -169,6 +169,8 @@ Solomon Lambert - https://github.com/sollambert
 [Node-url]: https://nodejs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[WebAssembly]: https://img.shields.io/badge/WebAssembly-20232A?style=for-the-badge&logo=webassembly&logoColor=624DE8
+[WebAssembly-url]: https://webassembly.org/
 
 <!-- Languages -->
 [Typescript]: https://img.shields.io/badge/Typescript-20232A?style=for-the-badge&logo=typescript&logoColor=1f77c7
